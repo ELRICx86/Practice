@@ -3,7 +3,7 @@ import java.util.*;
 public class Graph {
 	List<GraphNode> graph=new ArrayList<>();
 	int [][] adjacencyMatrix;
-	
+	//adjacency Matrix
 	public Graph(List<GraphNode> graph) {
 		this.graph=graph;
 		adjacencyMatrix=new int[graph.size()][graph.size()];
