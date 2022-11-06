@@ -1,23 +1,26 @@
 package Graph;
 import java.util.*;
 public class Graph {
+	
+	//list of graph node and adjacency matrix
+	
 	List<GraphNode> graph=new ArrayList<>();
 	int [][] adjacencyMatrix;
 	//adjacency Matrix
 	
-	
+	//initialization via constructor
 	public Graph(List<GraphNode> graph) {
 		this.graph=graph;
 		adjacencyMatrix=new int[graph.size()][graph.size()];
 	}
-	//unweighted graph
+	//Unweighted graph
 	public void addEdge(int i,int j) {
 		adjacencyMatrix[i][j]=1;
 		adjacencyMatrix[j][i]=1;
 	}
 	
 	
-	//get neighbor
+	//returning individual rows from the matrix--because row elements are connected
 	public List<GraphNode> 	getNeighbor(GraphNode node){
 		List<GraphNode> neighbor=new ArrayList<>();
 		int index=node.index;
@@ -29,6 +32,7 @@ public class Graph {
 		return neighbor;
 	}
 	
+	//BFS function which takes node input
 	public void bfsvisit(GraphNode node) {
 		LinkedList<GraphNode> queue=new LinkedList<>();
 		if(!node.isVisited)
@@ -57,6 +61,7 @@ public class Graph {
 		}
 	}
 	
+	//Helper function which iterates over all the list 
 	public void bfs() {
 		for(GraphNode n:graph) {
 			//if(!n.isVisited)
