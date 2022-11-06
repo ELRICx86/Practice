@@ -31,7 +31,9 @@ public class Main {
 		graph.addEdge(4, 2);
 		graph.addEdge(5, 1);
 		
-		//System.out.println(graph.toString());
+		System.out.println(graph.toString());
+		
+		graph.bfs();
 		
 		//Adjacency List
 		List<Graphnode1> nodelist=new ArrayList<>();
@@ -51,7 +53,7 @@ public class Main {
 		graph1.addEdge(2, 3);
 		graph1.addEdge(3, 4);
 		
-		System.out.println(graph1.toString());
+		//System.out.println(graph1.toString());
 		
 		
 		
