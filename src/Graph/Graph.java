@@ -33,13 +33,13 @@ public class Graph {
 		LinkedList<GraphNode> queue=new LinkedList<>();
 		if(!node.isVisited)
 			queue.add(node);
-		
+		//System.out.println(queue.get(0).node);
 		while(!queue.isEmpty()) {
 			
 //			for(GraphNode n:queue) {
 //				System.out.print(n.node+" ");
 //			}
-			//System.out.println();
+//			System.out.println();
 			GraphNode currnetNode=queue.remove(0);
 			currnetNode.isVisited=true;
 			
